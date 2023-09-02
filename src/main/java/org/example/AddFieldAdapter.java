@@ -9,12 +9,12 @@ import java.io.File;
 
 public class AddFieldAdapter extends ClassVisitor {
 
-    private int fAcc;
-    private String fName;
-    private String fDesc;
+    int fAcc;
+    String fName;
+    String fDesc;
     private boolean isFieldPresent;
 
-    private Object defaultVal;
+    Object defaultVal;
 
     public AddFieldAdapter(int api) {
         super(api);
