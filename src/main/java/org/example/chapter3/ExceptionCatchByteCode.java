@@ -21,7 +21,7 @@ public class org/example/chapter3/ExceptionCatchByteCode {
 
   // access flags 0x9
   public static sleep(J)V
-    TRYCATCHBLOCK L0 L1 L2 java/lang/InterruptedException // try 代码块位于L0-L1之间，L2对应的代码块为catch异常处理部分
+    TRYCATCHBLOCK L0 L1 L2 java/lang/InterruptedException // try 代码块位于L0-L1之间，L2对应的代码块为catch异常处理部分。这并不是一个指令。
    L0
     LINENUMBER 6 L0
     LLOAD 0
