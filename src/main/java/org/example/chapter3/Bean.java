@@ -64,7 +64,9 @@ public class org/example/chapter3/Bean {
     GOTO L3 // 跳转到L3标签执行return
    L1
     LINENUMBER 69 L1
-   FRAME SAME // 定义 栈映射帧，有点类似与帧快照，在编译阶段便分析执行下一条语句之前，当前帧的内容应该是怎样的。实际上java不在每一个语句都记录帧快照，只在一些关键节点记录帧快照，并且不记录全部的帧内容，而只记录diff。 主要作用用于加快虚拟机的类验证过程
+   FRAME SAME // 定义 栈映射帧，有点类似与帧快照（存储的不是具体的值快照，而是类型快照，变量表和操作数栈内元素的具体类型表），
+              // 在编译阶段便分析执行下一条语句之前，当前帧的内容应该都是什么类型的。实际上java不在每一个语句都记录帧快照，只在一些关键节点记录帧快照，并且不记录全部的帧内容，而只记录diff。初始帧不用存储，可以通过方法签名计算出来。
+              // 主要作用用于加快虚拟机的类验证过程
     NEW java/lang/IllegalArgumentException // new对象并压入操作数栈
     DUP // 拷贝一次操作数栈顶并压栈，即操作数栈最上面有2个Exception的引用。复制一次入栈的原因是，接下来要用两次
     INVOKESPECIAL java/lang/IllegalArgumentException.<init> ()V // 弹出副本，并执行init构造函数
