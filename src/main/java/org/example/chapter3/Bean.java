@@ -64,7 +64,7 @@ public class org/example/chapter3/Bean {
     GOTO L3 // 跳转到L3标签执行return
    L1
     LINENUMBER 69 L1
-   FRAME SAME
+   FRAME SAME // 定义 栈映射帧
     NEW java/lang/IllegalArgumentException // new对象并压入操作数栈
     DUP // 拷贝一次操作数栈顶并压栈，即操作数栈最上面有2个Exception的引用。复制一次入栈的原因是，接下来要用两次
     INVOKESPECIAL java/lang/IllegalArgumentException.<init> ()V // 弹出副本，并执行init构造函数
