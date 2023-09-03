@@ -44,6 +44,7 @@ public class C322MethodCreateTest implements Opcodes {
                 }
              */
             checkAndSetFVisitor.visitCode();
+            // 这里的写法哈asm guide3.2.2中的写法稍微不同，没有将条件反转，将if、else互换。
             checkAndSetFVisitor.visitLabel(new Label()); // if表达式本身
             checkAndSetFVisitor.visitVarInsn(ILOAD,1); // 0 是this，1是第一个入参
             Label ifBlock = new Label();
