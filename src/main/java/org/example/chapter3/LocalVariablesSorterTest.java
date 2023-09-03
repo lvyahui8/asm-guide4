@@ -61,7 +61,7 @@ public class LocalVariablesSorterTest {
         @Override
         public void visitEnd() {
             // 增加timer字段
-            visitField(ACC_PUBLIC + ACC_STATIC ,"timer","j",null,0L);
+            visitField(ACC_PUBLIC + ACC_STATIC ,"timer","J",null,0L);
             super.visitEnd();
         }
 
